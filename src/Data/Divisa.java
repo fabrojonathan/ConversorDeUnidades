@@ -1,3 +1,4 @@
+package Data;
 
 public enum Divisa {
 	Pesos,

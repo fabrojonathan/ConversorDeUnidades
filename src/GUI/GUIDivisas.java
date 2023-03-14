@@ -1,10 +1,12 @@
+package GUI;
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-public class GUIPrincipal extends JFrame {
+public class GUIDivisas extends JFrame {
 
 	private JPanel contentPane;
 
@@ -15,7 +17,7 @@ public class GUIPrincipal extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					GUIPrincipal frame = new GUIPrincipal();
+					GUIDivisas frame = new GUIDivisas();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -27,7 +29,7 @@ public class GUIPrincipal extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public GUIPrincipal() {
+	public GUIDivisas() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
