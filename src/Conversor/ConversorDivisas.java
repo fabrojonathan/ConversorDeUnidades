@@ -1,18 +1,29 @@
 package Conversor;
 
+import Data.*;
+import java.io.IOException;
+import java.util.Properties;
+
 public class ConversorDivisas implements Conversor{
 	
-	private int vUnidadInicial;
-	private int vUnidadFinal;
-	private double vDigito;
-	
 	private double HallarValorConversion(int pUnidadInicial, int pUnidadFinal) {
-		return 0;
+		
+		String UnidadInicial = Divisa.values()[pUnidadInicial].name();
+		String UnidadFinal = Divisa.values()[pUnidadFinal].name();
+		String ValorConversion = new StringBuilder(UnidadInicial).append("_").append(UnidadFinal).toString();
+		
+		Properties properties = new Properties();
+		try {
+			properties.load(ConversorDivisas.class.getResourceAsStream("../Data/Valores.properties"));
+		} catch (IOException e) { e.printStackTrace();}
+		
+		return Double.parseDouble(properties.getProperty(ValorConversion));
 	}
 
 	@Override
 	public double Convertir(int pUnidadInicial, int pUnidadFinal, double pDigito) {
-		// TODO Esbozo de método generado automáticamente
-		return 0;
+		
+		double ValorConversion = HallarValorConversion(pUnidadInicial, pUnidadFinal);
+		return pDigito * ValorConversion;
 	}
 }
