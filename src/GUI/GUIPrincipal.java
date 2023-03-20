@@ -74,6 +74,7 @@ public class GUIPrincipal extends JFrame {
 				case 0:	//Divisas	
 					GUIDivisas formDivisas = new GUIDivisas();
 					formDivisas.setVisible(true);
+					
 					break;
 				
 				case 1: //Masa
