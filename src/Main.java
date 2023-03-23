@@ -3,7 +3,7 @@ import java.awt.event.ActionListener;
 import javax.swing.Timer;
 
 import GUI.GUIBienvenida;
-import GUI.GUIPrincipal;
+import GUI.GUIConversor;
 
 public class Main {
 
@@ -12,7 +12,7 @@ public class Main {
 		GUIBienvenida nBienvenida = new GUIBienvenida();
 		nBienvenida.setLocationRelativeTo(null);
 		nBienvenida.setVisible(true);
-		GUIPrincipal nGUIPrincipal = new GUIPrincipal();
+		GUIConversor nGUIPrincipal = new GUIConversor();
 		nGUIPrincipal.setLocationRelativeTo(null);
 		
 		Timer timer = new Timer(4000,new ActionListener(){
