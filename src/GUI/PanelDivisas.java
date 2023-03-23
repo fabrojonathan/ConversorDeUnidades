@@ -48,7 +48,7 @@ public class PanelDivisas extends JPanel {
 		
 		JLabel lblNewLabel = new JLabel("Ingrese el monto");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblNewLabel.setBounds(70, 64, 137, 14);
+		lblNewLabel.setBounds(70, 61, 137, 17);
 		add(lblNewLabel);
 		
 		txtMonto = new JTextField();
@@ -72,7 +72,7 @@ public class PanelDivisas extends JPanel {
 		lblNewLabel_2.setBounds(70, 155, 137, 14);
 		add(lblNewLabel_2);
 		
-		JLabel lblNewLabel_1 = new JLabel("Divisa base");
+		JLabel lblNewLabel_1 = new JLabel("Divisa a convertir");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblNewLabel_1.setBounds(70, 108, 137, 14);
 		add(lblNewLabel_1);
