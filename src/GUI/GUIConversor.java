@@ -99,41 +99,41 @@ public class GUIConversor extends JFrame {
 		contentGeneral.add(panelMenuBar);
 		panelMenuBar.setLayout(null);
 		
-		JButton btnNewButton = new JButton("");
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton btnLongitud = new JButton("");
+		btnLongitud.setIcon(new ImageIcon(GUIConversor.class.getResource("/Resources/icons/regla-cuadrada.png")));
+		btnLongitud.setBounds(0, 256, 64, 64);
+		panelMenuBar.add(btnLongitud);
+		
+		JButton btnHome = new JButton("");
+		btnHome.setBounds(0, 0, 64, 64);
+		panelMenuBar.add(btnHome);
+		btnHome.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				PanelDivisas nPanelHome = new PanelDivisas();
 				nPanelHome.setSize(535, 319);
-				nPanelHome.setLocation(63,30);
+				nPanelHome.setLocation(63,31);
 				
 				contentGeneral.add(nPanelHome);
 				contentGeneral.repaint();
 				contentGeneral.revalidate();
 			}
 		});
-		btnNewButton.setBounds(0, 0, 64, 64);
-		panelMenuBar.add(btnNewButton);
-		btnNewButton.setIcon(new ImageIcon(GUIConversor.class.getResource("/Resources/icons/casa.png")));
-		btnNewButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnHome.setIcon(new ImageIcon(GUIConversor.class.getResource("/Resources/icons/casa.png")));
+		btnHome.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		
-		JButton btnNewButton_1 = new JButton("");
-		btnNewButton_1.setIcon(new ImageIcon(GUIConversor.class.getResource("/Resources/icons/cambio-de-dinero.png")));
-		btnNewButton_1.setBounds(0, 64, 64, 64);
-		panelMenuBar.add(btnNewButton_1);
+		JButton btnDivisa = new JButton("");
+		btnDivisa.setBounds(0, 64, 64, 64);
+		panelMenuBar.add(btnDivisa);
+		btnDivisa.setIcon(new ImageIcon(GUIConversor.class.getResource("/Resources/icons/cambio-de-dinero.png")));
 		
-		JButton btnNewButton_1_1 = new JButton("");
-		btnNewButton_1_1.setIcon(new ImageIcon(GUIConversor.class.getResource("/Resources/icons/escala-de-peso.png")));
-		btnNewButton_1_1.setBounds(0, 128, 64, 64);
-		panelMenuBar.add(btnNewButton_1_1);
+		JButton btnMasa = new JButton("");
+		btnMasa.setBounds(0, 128, 64, 64);
+		panelMenuBar.add(btnMasa);
+		btnMasa.setIcon(new ImageIcon(GUIConversor.class.getResource("/Resources/icons/escala-de-peso.png")));
 		
-		JButton btnNewButton_1_1_1 = new JButton("");
-		btnNewButton_1_1_1.setIcon(new ImageIcon(GUIConversor.class.getResource("/Resources/icons/alta-temperatura.png")));
-		btnNewButton_1_1_1.setBounds(0, 192, 64, 64);
-		panelMenuBar.add(btnNewButton_1_1_1);
-		
-		JButton btnNewButton_1_1_1_1 = new JButton("");
-		btnNewButton_1_1_1_1.setIcon(new ImageIcon(GUIConversor.class.getResource("/Resources/icons/regla-cuadrada.png")));
-		btnNewButton_1_1_1_1.setBounds(0, 256, 64, 64);
-		panelMenuBar.add(btnNewButton_1_1_1_1);
+		JButton btnTemperatura = new JButton("");
+		btnTemperatura.setBounds(0, 192, 64, 64);
+		panelMenuBar.add(btnTemperatura);
+		btnTemperatura.setIcon(new ImageIcon(GUIConversor.class.getResource("/Resources/icons/alta-temperatura.png")));
 	}
 }
