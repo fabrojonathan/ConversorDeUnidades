@@ -109,7 +109,7 @@ public class GUIConversor extends JFrame {
 		panelMenuBar.add(btnHome);
 		btnHome.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				PanelDivisas nPanelHome = new PanelDivisas();
+				PanelHome nPanelHome = new PanelHome();
 				nPanelHome.setSize(535, 319);
 				nPanelHome.setLocation(63,31);
 				
@@ -122,6 +122,17 @@ public class GUIConversor extends JFrame {
 		btnHome.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		
 		JButton btnDivisa = new JButton("");
+		btnDivisa.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PanelDivisas nPanelHome = new PanelDivisas();
+				nPanelHome.setSize(535, 319);
+				nPanelHome.setLocation(63,31);
+				
+				contentGeneral.add(nPanelHome);
+				contentGeneral.repaint();
+				contentGeneral.revalidate();
+			}
+		});
 		btnDivisa.setBounds(0, 64, 64, 64);
 		panelMenuBar.add(btnDivisa);
 		btnDivisa.setIcon(new ImageIcon(GUIConversor.class.getResource("/Resources/icons/cambio-de-dinero.png")));
