@@ -63,22 +63,6 @@ public class GUIBienvenida extends JFrame {
 		progressBar.setBounds(538, 364, 252, 25);
 		contentPane.add(progressBar);
 		
-		JLabel lblNewLabel_1 = new JLabel("By Fabro Jonathan - Alura - OneOracle");
-		lblNewLabel_1.setBounds(10, 363, 252, 25);
-		contentPane.add(lblNewLabel_1);
-		lblNewLabel_1.setBackground(SystemColor.scrollbar);
-		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1.setBorder(null);
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 11));
-		lblNewLabel_1.setForeground(SystemColor.textHighlight);
-		
-		JPanel panel = new JPanel();
-		panel.setForeground(SystemColor.activeCaptionBorder);
-		panel.setBackground(SystemColor.controlHighlight);
-		panel.setBounds(10, 364, 252, 25);
-		contentPane.add(panel);
-		panel.setLayout(null);
-		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setBackground(UIManager.getColor("FormattedTextField.selectionBackground"));
 		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\jonhf\\eclipse-workspace\\ConversorDeUnidades\\src\\Resources\\wallpaperbetter.com_1024x600.jpg"));
@@ -88,7 +72,7 @@ public class GUIBienvenida extends JFrame {
 		 Thread thread = new Thread(() -> {
 	            for (int i = 0; i <= 100; i++) {
 	                try {
-	                    Thread.sleep(35);
+	                    Thread.sleep(30);
 	                } catch (InterruptedException e) {
 	                    e.printStackTrace();
 	                }
