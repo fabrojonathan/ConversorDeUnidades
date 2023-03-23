@@ -50,6 +50,11 @@ public class GUIConversor extends JFrame {
 		setContentPane(contentGeneral);
 		contentGeneral.setLayout(null);
 		
+		JPanel panelConversorSelected = new JPanel();
+		panelConversorSelected.setBounds(63, 30, 537, 320);
+		contentGeneral.add(panelConversorSelected);
+		panelConversorSelected.setLayout(null);
+		
 		JPanel panelSecondaryBar = new JPanel();
 		panelSecondaryBar.setBorder(new LineBorder(new Color(60, 72, 86)));
 		panelSecondaryBar.setBackground(new Color(60, 72, 86));
@@ -99,7 +104,32 @@ public class GUIConversor extends JFrame {
 		contentGeneral.add(panelMenuBar);
 		panelMenuBar.setLayout(null);
 		
+		PanelHome nPanelHome = new PanelHome();
+		nPanelHome.setSize(537, 320);
+		nPanelHome.setLocation(0,0);
+		
+		panelConversorSelected.removeAll();
+		panelConversorSelected.add(nPanelHome);
+		panelConversorSelected.repaint();
+		panelConversorSelected.revalidate();
+		
+		
+		
+		//Buttons
+		
 		JButton btnLongitud = new JButton("");
+		btnLongitud.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PanelLongitud nPanelLongitud = new PanelLongitud();
+				nPanelLongitud.setSize(537,320);
+				nPanelLongitud.setLocation(0,0);
+				
+				panelConversorSelected.removeAll();
+				panelConversorSelected.add(nPanelLongitud);
+				panelConversorSelected.repaint();
+				panelConversorSelected.revalidate();
+			}
+		});
 		btnLongitud.setIcon(new ImageIcon(GUIConversor.class.getResource("/Resources/icons/regla-cuadrada.png")));
 		btnLongitud.setBounds(0, 256, 64, 64);
 		panelMenuBar.add(btnLongitud);
@@ -109,13 +139,15 @@ public class GUIConversor extends JFrame {
 		panelMenuBar.add(btnHome);
 		btnHome.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				PanelHome nPanelHome = new PanelHome();
-				nPanelHome.setSize(535, 319);
-				nPanelHome.setLocation(63,31);
 				
-				contentGeneral.add(nPanelHome);
-				contentGeneral.repaint();
-				contentGeneral.revalidate();
+				PanelHome nPanelHome = new PanelHome();
+				nPanelHome.setSize(537, 320);
+				nPanelHome.setLocation(0,0);
+				
+				panelConversorSelected.removeAll();
+				panelConversorSelected.add(nPanelHome);
+				panelConversorSelected.repaint();
+				panelConversorSelected.revalidate();
 			}
 		});
 		btnHome.setIcon(new ImageIcon(GUIConversor.class.getResource("/Resources/icons/casa.png")));
@@ -124,13 +156,14 @@ public class GUIConversor extends JFrame {
 		JButton btnDivisa = new JButton("");
 		btnDivisa.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				PanelDivisas nPanelHome = new PanelDivisas();
-				nPanelHome.setSize(535, 319);
-				nPanelHome.setLocation(63,31);
+				PanelDivisas nPanelDivisa = new PanelDivisas();
+				nPanelDivisa.setSize(537, 320);
+				nPanelDivisa.setLocation(0,0);
 				
-				contentGeneral.add(nPanelHome);
-				contentGeneral.repaint();
-				contentGeneral.revalidate();
+				panelConversorSelected.removeAll();
+				panelConversorSelected.add(nPanelDivisa);
+				panelConversorSelected.repaint();
+				panelConversorSelected.revalidate();
 			}
 		});
 		btnDivisa.setBounds(0, 64, 64, 64);
@@ -138,11 +171,35 @@ public class GUIConversor extends JFrame {
 		btnDivisa.setIcon(new ImageIcon(GUIConversor.class.getResource("/Resources/icons/cambio-de-dinero.png")));
 		
 		JButton btnMasa = new JButton("");
+		btnMasa.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PanelMasa pPanelMasa = new PanelMasa();
+				pPanelMasa.setSize(537, 320);
+				pPanelMasa.setLocation(0, 0);
+				
+				panelConversorSelected.removeAll();
+				panelConversorSelected.add(pPanelMasa);
+				panelConversorSelected.repaint();
+				panelConversorSelected.revalidate();
+			}
+		});
 		btnMasa.setBounds(0, 128, 64, 64);
 		panelMenuBar.add(btnMasa);
 		btnMasa.setIcon(new ImageIcon(GUIConversor.class.getResource("/Resources/icons/escala-de-peso.png")));
 		
 		JButton btnTemperatura = new JButton("");
+		btnTemperatura.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PanelTemperatura nPanelTemperatura = new PanelTemperatura();
+				nPanelTemperatura.setSize(537,320);
+				nPanelTemperatura.setLocation(0, 0);
+				
+				panelConversorSelected.removeAll();
+				panelConversorSelected.add(nPanelTemperatura);
+				panelConversorSelected.repaint();
+				panelConversorSelected.revalidate();
+			}
+		});
 		btnTemperatura.setBounds(0, 192, 64, 64);
 		panelMenuBar.add(btnTemperatura);
 		btnTemperatura.setIcon(new ImageIcon(GUIConversor.class.getResource("/Resources/icons/alta-temperatura.png")));
