@@ -15,7 +15,7 @@ public class Main {
 		GUIConversor nGUIPrincipal = new GUIConversor();
 		nGUIPrincipal.setLocationRelativeTo(null);
 		
-		Timer timer = new Timer(4000,new ActionListener(){
+		Timer timer = new Timer(3000,new ActionListener(){
             public void actionPerformed(ActionEvent e) {
                 nBienvenida.setVisible(false);
                 nGUIPrincipal.setVisible(true);
