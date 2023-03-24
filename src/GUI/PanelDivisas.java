@@ -21,6 +21,7 @@ import java.awt.Component;
 import javax.swing.DefaultComboBoxModel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.text.*;
 
 public class PanelDivisas extends JPanel {
 	private JTextField txtMonto;
@@ -64,6 +65,7 @@ public class PanelDivisas extends JPanel {
 		
 		JComboBox cBoxDivisaFinal = new JComboBox();
 		cBoxDivisaFinal.setModel(new DefaultComboBoxModel(new String[] {"Pesos", "Dolar", "DolarAustraliano", "Euro", "Libra", "Real", "Yen", "PesoMexicano", "PesoUruguayo", "Yuan"}));
+		cBoxDivisaFinal.setSelectedIndex(1);
 		cBoxDivisaFinal.setBounds(217, 153, 248, 22);
 		add(cBoxDivisaFinal);
 		
@@ -80,14 +82,21 @@ public class PanelDivisas extends JPanel {
 		JButton btnConvertir = new JButton("Convertir");
 		btnConvertir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Double monto = Double.parseDouble(txtMonto.getText());
-				int indexBase = cBoxDivisaBase.getSelectedIndex();
-				int indexFinal = cBoxDivisaFinal.getSelectedIndex();
-				
-				ConversorDivisas nConversor = new ConversorDivisas();
-				Double resultadoConversion = nConversor.Convertir(indexBase, indexFinal, monto);
-				
-				txtResult.setText(cBoxDivisaFinal.getSelectedItem().toString() + " " + resultadoConversion.toString());
+				try {
+					
+					Double monto = Double.parseDouble(txtMonto.getText());
+					int indexBase = cBoxDivisaBase.getSelectedIndex();
+					int indexFinal = cBoxDivisaFinal.getSelectedIndex();
+					
+					ConversorDivisas nConversor = new ConversorDivisas();
+					Double resultadoConversion = nConversor.Convertir(indexBase, indexFinal, monto);
+					
+					DecimalFormat ft = new DecimalFormat("#.##");
+					txtResult.setText(ft.format(resultadoConversion).toString());
+					
+				} catch (Exception ex) {
+					JOptionPane.showMessageDialog(btnConvertir, ex);
+				}
 			}
 		});
 		btnConvertir.setAlignmentX(Component.CENTER_ALIGNMENT);
