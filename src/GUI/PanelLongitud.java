@@ -113,7 +113,7 @@ public class PanelLongitud extends JPanel {
 				}
 			}
 		});
-		btnConvertir.setFont(new Font("Tahoma", Font.BOLD, 14));
+		btnConvertir.setFont(new Font("Leelawadee", Font.BOLD, 14));
 		btnConvertir.setAlignmentX(0.5f);
 		btnConvertir.setBounds(325, 197, 140, 25);
 		add(btnConvertir);
