@@ -3,7 +3,12 @@ package GUI;
 import javax.swing.JPanel;
 import java.awt.Color;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.border.MatteBorder;
+
+import Conversor.ConversorTemperatura;
+import Data.Temperatura;
+
 import java.awt.Font;
 import javax.swing.SwingConstants;
 import javax.swing.JTextField;
@@ -12,6 +17,10 @@ import javax.swing.JButton;
 import javax.swing.border.CompoundBorder;
 import javax.swing.border.BevelBorder;
 import javax.swing.DefaultComboBoxModel;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+import java.text.*;
 
 public class PanelTemperatura extends JPanel {
 	private JTextField txtTemperatura;
@@ -69,11 +78,6 @@ public class PanelTemperatura extends JPanel {
 		lblNewLabel_1.setBounds(70, 108, 137, 14);
 		add(lblNewLabel_1);
 		
-		JButton btnConvertir = new JButton("Convertir");
-		btnConvertir.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		btnConvertir.setAlignmentX(0.5f);
-		btnConvertir.setBounds(325, 197, 140, 25);
-		add(btnConvertir);
 		
 		JPanel panel = new JPanel();
 		panel.setLayout(null);
@@ -87,6 +91,33 @@ public class PanelTemperatura extends JPanel {
 		lblNewLabel_3.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 12));
 		lblNewLabel_3.setBounds(10, 0, 206, 23);
 		panel.add(lblNewLabel_3);
+		
+		JButton btnConvertir = new JButton("Convertir");
+		btnConvertir.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				try {
+					Double temperatura = Double.parseDouble(txtTemperatura.getText());
+					
+					Temperatura tempBase = Temperatura.values()[cBoxUnidadBase.getSelectedIndex()];
+					Temperatura tempFinal = Temperatura.values()[cBoxUnidadFinal.getSelectedIndex()];
+					
+					DecimalFormat ft = new DecimalFormat("#.##");
+					
+					ConversorTemperatura nConversorTemperatura = new ConversorTemperatura();
+					Double Resultado = nConversorTemperatura.Convertir(tempBase, tempFinal, temperatura);
+					
+					txtResult.setText(ft.format(Resultado).toString());
+					
+				} catch (Exception e1) {
+					JOptionPane.showMessageDialog(btnConvertir, e1);
+				}
+			}
+		});
+		btnConvertir.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnConvertir.setAlignmentX(0.5f);
+		btnConvertir.setBounds(325, 197, 140, 25);
+		add(btnConvertir);
 
 	}
 
