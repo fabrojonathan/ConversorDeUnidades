@@ -40,40 +40,42 @@ public class PanelLongitud extends JPanel {
 		
 		JLabel txtResult = new JLabel("--");
 		txtResult.setHorizontalAlignment(SwingConstants.CENTER);
-		txtResult.setFont(new Font("Tahoma", Font.ITALIC, 18));
+		txtResult.setFont(new Font("Leelawadee", Font.BOLD | Font.ITALIC, 18));
 		txtResult.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
 		txtResult.setBounds(0, 0, 256, 40);
 		panelResult.add(txtResult);
 		
 		JLabel lblIngreseLaMedida = new JLabel("Ingrese la medida");
-		lblIngreseLaMedida.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblIngreseLaMedida.setFont(new Font("Leelawadee", Font.PLAIN, 15));
 		lblIngreseLaMedida.setBounds(70, 61, 137, 17);
 		add(lblIngreseLaMedida);
 		
 		txtMedida = new JTextField();
-		txtMedida.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		txtMedida.setFont(new Font("Leelawadee", Font.PLAIN, 14));
 		txtMedida.setColumns(10);
 		txtMedida.setBounds(217, 60, 248, 23);
 		add(txtMedida);
 		
 		JComboBox cBoxUnidadBase = new JComboBox();
+		cBoxUnidadBase.setFont(new Font("Leelawadee", Font.PLAIN, 14));
 		cBoxUnidadBase.setModel(new DefaultComboBoxModel(new String[] {"Milimetro", "Centimetro", "Decimetro", "Metro", "Decametro", "Hectometro", "Kilometro"}));
 		cBoxUnidadBase.setBounds(217, 106, 248, 22);
 		add(cBoxUnidadBase);
 		
 		JComboBox cBoxUnidadFinal = new JComboBox();
+		cBoxUnidadFinal.setFont(new Font("Leelawadee", Font.PLAIN, 14));
 		cBoxUnidadFinal.setModel(new DefaultComboBoxModel(new String[] {"Milimetro", "Centimetro", "Decimetro", "Metro", "Decametro", "Hectometro", "Kilometro"}));
 		cBoxUnidadFinal.setSelectedIndex(1);
 		cBoxUnidadFinal.setBounds(217, 153, 248, 22);
 		add(cBoxUnidadFinal);
 		
 		JLabel lblNewLabel_2 = new JLabel("Unidad a convertir");
-		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel_2.setFont(new Font("Leelawadee", Font.PLAIN, 15));
 		lblNewLabel_2.setBounds(70, 155, 137, 14);
 		add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_1 = new JLabel("Unidad base");
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel_1.setFont(new Font("Leelawadee", Font.PLAIN, 15));
 		lblNewLabel_1.setBounds(70, 108, 137, 14);
 		add(lblNewLabel_1);
 		
@@ -87,7 +89,7 @@ public class PanelLongitud extends JPanel {
 		
 		JLabel lblNewLabel_3 = new JLabel("Conversor de Longitudes");
 		lblNewLabel_3.setHorizontalAlignment(SwingConstants.LEFT);
-		lblNewLabel_3.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 12));
+		lblNewLabel_3.setFont(new Font("Leelawadee", Font.BOLD | Font.ITALIC, 14));
 		lblNewLabel_3.setBounds(10, 0, 206, 23);
 		panel.add(lblNewLabel_3);
 
@@ -111,7 +113,7 @@ public class PanelLongitud extends JPanel {
 				}
 			}
 		});
-		btnConvertir.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnConvertir.setFont(new Font("Tahoma", Font.BOLD, 14));
 		btnConvertir.setAlignmentX(0.5f);
 		btnConvertir.setBounds(325, 197, 140, 25);
 		add(btnConvertir);

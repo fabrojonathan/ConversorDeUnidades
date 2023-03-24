@@ -32,7 +32,7 @@ public class PanelMasa extends JPanel {
 		setLayout(null);
 		
 		txtCantidad = new JTextField();
-		txtCantidad.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		txtCantidad.setFont(new Font("Leelawadee", Font.PLAIN, 14));
 		txtCantidad.setColumns(10);
 		txtCantidad.setBounds(217, 60, 248, 23);
 		add(txtCantidad);
@@ -48,11 +48,13 @@ public class PanelMasa extends JPanel {
 		add(lblNewLabel_1);
 		
 		JComboBox cBoxUnidadBase = new JComboBox();
+		cBoxUnidadBase.setFont(new Font("Leelawadee", Font.PLAIN, 14));
 		cBoxUnidadBase.setModel(new DefaultComboBoxModel(new String[] {"Miligramo", "Centigramo", "Decigramo", "Gramo", "Decagramo", "Hectagramo", "Kilogramo"}));
 		cBoxUnidadBase.setBounds(217, 106, 248, 22);
 		add(cBoxUnidadBase);
 		
 		JComboBox cBoxUnidadFinal = new JComboBox();
+		cBoxUnidadFinal.setFont(new Font("Leelawadee", Font.PLAIN, 14));
 		cBoxUnidadFinal.setModel(new DefaultComboBoxModel(new String[] {"Miligramo", "Centigramo", "Decigramo", "Gramo", "Decagramo", "Hectagramo", "Kilogramo"}));
 		cBoxUnidadFinal.setSelectedIndex(1);
 		cBoxUnidadFinal.setBounds(217, 153, 248, 22);
@@ -72,7 +74,7 @@ public class PanelMasa extends JPanel {
 		
 		JLabel lblNewLabel_3_1 = new JLabel("Conversor de Masas");
 		lblNewLabel_3_1.setHorizontalAlignment(SwingConstants.LEFT);
-		lblNewLabel_3_1.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 12));
+		lblNewLabel_3_1.setFont(new Font("Leelawadee", Font.BOLD | Font.ITALIC, 14));
 		lblNewLabel_3_1.setBounds(10, 0, 206, 23);
 		panel.add(lblNewLabel_3_1);
 		
@@ -87,7 +89,7 @@ public class PanelMasa extends JPanel {
 		txtResult.setBounds(0, 0, 256, 40);
 		panelResult.add(txtResult);
 		txtResult.setHorizontalAlignment(SwingConstants.CENTER);
-		txtResult.setFont(new Font("Tahoma", Font.ITALIC, 18));
+		txtResult.setFont(new Font("Leelawadee", Font.BOLD | Font.ITALIC, 18));
 		txtResult.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
 		
 		JButton btnConvertir = new JButton("Convertir");
@@ -110,7 +112,7 @@ public class PanelMasa extends JPanel {
 				}
 			}
 		});
-		btnConvertir.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnConvertir.setFont(new Font("Leelawadee", Font.BOLD, 14));
 		btnConvertir.setAlignmentX(0.5f);
 		btnConvertir.setBounds(325, 197, 140, 25);
 		add(btnConvertir);

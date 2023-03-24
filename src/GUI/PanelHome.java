@@ -17,12 +17,12 @@ public class PanelHome extends JPanel {
 		setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Bienvenido!");
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 16));
+		lblNewLabel.setFont(new Font("Leelawadee", Font.BOLD | Font.ITALIC, 16));
 		lblNewLabel.setBounds(10, 11, 194, 22);
 		add(lblNewLabel);
 		
 		JTextPane txtpnEstaAplicacinDe = new JTextPane();
-		txtpnEstaAplicacinDe.setFont(new Font("Tahoma", Font.ITALIC, 14));
+		txtpnEstaAplicacinDe.setFont(new Font("Leelawadee", Font.ITALIC, 14));
 		txtpnEstaAplicacinDe.setText("Esta aplicación le facilitara la vida.\r\nCon pocos clicks podra realizar cualquier tipo de conversión.\r\nIngrese la medida o monto, seleccione la unidad base y la unidad final, y la aplicación\r\nle mostrara el resultado!\r\n\r\n\r\n\t\t\t\t\t   \t\t   Desarrollada por: Fabro Jonathan\r\n\t\t  De la mano de: OneOracle - Alura");
 		txtpnEstaAplicacinDe.setBounds(143, 125, 384, 184);
 		add(txtpnEstaAplicacinDe);

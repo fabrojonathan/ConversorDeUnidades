@@ -46,37 +46,39 @@ public class PanelDivisas extends JPanel {
 		txtResult.setBounds(0, 0, 256, 40);
 		panelResult.add(txtResult);
 		txtResult.setHorizontalAlignment(SwingConstants.CENTER);
-		txtResult.setFont(new Font("Tahoma", Font.ITALIC, 18));
+		txtResult.setFont(new Font("Leelawadee", Font.BOLD | Font.ITALIC, 18));
 		
 		JLabel lblNewLabel = new JLabel("Ingrese el monto");
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel.setFont(new Font("Leelawadee", Font.PLAIN, 15));
 		lblNewLabel.setBounds(70, 61, 137, 17);
 		add(lblNewLabel);
 		
 		txtMonto = new JTextField();
-		txtMonto.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		txtMonto.setFont(new Font("Leelawadee", Font.PLAIN, 14));
 		txtMonto.setColumns(10);
 		txtMonto.setBounds(217, 60, 248, 23);
 		add(txtMonto);
 		
 		JComboBox cBoxDivisaBase = new JComboBox();
+		cBoxDivisaBase.setFont(new Font("Leelawadee", Font.PLAIN, 14));
 		cBoxDivisaBase.setModel(new DefaultComboBoxModel(new String[] {"Pesos", "Dolar", "DolarAustraliano", "Euro", "Libra", "Real", "Yen", "PesoMexicano", "PesoUruguayo", "Yuan", "Won"}));
 		cBoxDivisaBase.setBounds(217, 106, 248, 22);
 		add(cBoxDivisaBase);
 		
 		JComboBox cBoxDivisaFinal = new JComboBox();
+		cBoxDivisaFinal.setFont(new Font("Leelawadee", Font.PLAIN, 14));
 		cBoxDivisaFinal.setModel(new DefaultComboBoxModel(new String[] {"Pesos", "Dolar", "DolarAustraliano", "Euro", "Libra", "Real", "Yen", "PesoMexicano", "PesoUruguayo", "Yuan", "Won"}));
 		cBoxDivisaFinal.setSelectedIndex(1);
 		cBoxDivisaFinal.setBounds(217, 153, 248, 22);
 		add(cBoxDivisaFinal);
 		
 		JLabel lblNewLabel_2 = new JLabel("Divisa final");
-		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel_2.setFont(new Font("Leelawadee", Font.PLAIN, 15));
 		lblNewLabel_2.setBounds(70, 155, 137, 14);
 		add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_1 = new JLabel("Divisa a convertir");
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel_1.setFont(new Font("Leelawadee", Font.PLAIN, 15));
 		lblNewLabel_1.setBounds(70, 108, 137, 14);
 		add(lblNewLabel_1);
 		
@@ -101,7 +103,7 @@ public class PanelDivisas extends JPanel {
 			}
 		});
 		btnConvertir.setAlignmentX(Component.CENTER_ALIGNMENT);
-		btnConvertir.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnConvertir.setFont(new Font("Leelawadee", Font.BOLD, 14));
 		btnConvertir.setBounds(325, 197, 140, 25);
 		add(btnConvertir);
 		
@@ -113,7 +115,7 @@ public class PanelDivisas extends JPanel {
 		panel.setLayout(null);
 		
 		JLabel lblNewLabel_3 = new JLabel("Conversor de Divisas");
-		lblNewLabel_3.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 12));
+		lblNewLabel_3.setFont(new Font("Leelawadee", Font.BOLD | Font.ITALIC, 14));
 		lblNewLabel_3.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel_3.setBounds(10, 0, 206, 23);
 		panel.add(lblNewLabel_3);
