@@ -14,7 +14,7 @@ public class ConversorDivisas implements Conversor{
 		
 		Properties properties = new Properties();
 		try {
-			properties.load(ConversorDivisas.class.getResourceAsStream("../Data/Valores.properties"));
+			properties.load(ConversorDivisas.class.getResourceAsStream("/Data/Valores.properties"));
 		} catch (IOException e) { e.printStackTrace();}
 		
 		return Double.parseDouble(properties.getProperty(ValorConversion));
