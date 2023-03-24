@@ -99,13 +99,13 @@ public class PanelTemperatura extends JPanel {
 				try {
 					Double temperatura = Double.parseDouble(txtTemperatura.getText());
 					
-					Temperatura tempBase = Temperatura.values()[cBoxUnidadBase.getSelectedIndex()];
-					Temperatura tempFinal = Temperatura.values()[cBoxUnidadFinal.getSelectedIndex()];
+					int indexBase = cBoxUnidadBase.getSelectedIndex();
+					int indexFinal = cBoxUnidadFinal.getSelectedIndex();
 					
 					DecimalFormat ft = new DecimalFormat("#.##");
 					
 					ConversorTemperatura nConversorTemperatura = new ConversorTemperatura();
-					Double Resultado = nConversorTemperatura.Convertir(tempBase, tempFinal, temperatura);
+					Double Resultado = nConversorTemperatura.Convertir(indexBase, indexFinal, temperatura);
 					
 					txtResult.setText(ft.format(Resultado).toString());
 					
