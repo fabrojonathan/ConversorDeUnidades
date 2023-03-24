@@ -21,6 +21,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 import java.text.*;
+import javax.swing.ImageIcon;
 
 public class PanelTemperatura extends JPanel {
 	private JTextField txtTemperatura;
@@ -118,6 +119,31 @@ public class PanelTemperatura extends JPanel {
 		btnConvertir.setAlignmentX(0.5f);
 		btnConvertir.setBounds(325, 197, 140, 25);
 		add(btnConvertir);
+		
+		JButton btnIntercambiar = new JButton("");
+		btnIntercambiar.setIcon(new ImageIcon(PanelTemperatura.class.getResource("/Resources/icons/intercambio.png")));
+		btnIntercambiar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					int indexBaseActual = cBoxUnidadBase.getSelectedIndex();
+					int indexFinalActual = cBoxUnidadFinal.getSelectedIndex();
+					int indexBaseNueva = indexFinalActual;
+					int indexFinalNueva = indexBaseActual;
+					
+					cBoxUnidadBase.setSelectedIndex(indexBaseNueva);
+					cBoxUnidadFinal.setSelectedIndex(indexFinalNueva);
+					
+					txtResult.setText("--");
+					
+				} catch (Exception ex) {
+					JOptionPane.showMessageDialog(btnIntercambiar, ex);
+				}
+			}
+		});
+		btnIntercambiar.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnIntercambiar.setAlignmentX(0.5f);
+		btnIntercambiar.setBounds(471, 128, 25, 25);
+		add(btnIntercambiar);
 
 	}
 

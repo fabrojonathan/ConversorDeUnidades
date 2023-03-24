@@ -22,6 +22,7 @@ import javax.swing.DefaultComboBoxModel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.text.*;
+import javax.swing.ImageIcon;
 
 public class PanelDivisas extends JPanel {
 	private JTextField txtMonto;
@@ -116,6 +117,31 @@ public class PanelDivisas extends JPanel {
 		lblNewLabel_3.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel_3.setBounds(10, 0, 206, 23);
 		panel.add(lblNewLabel_3);
+		
+		JButton btnIntercambiar = new JButton("");
+		btnIntercambiar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					int indexBaseActual = cBoxDivisaBase.getSelectedIndex();
+					int indexFinalActual = cBoxDivisaFinal.getSelectedIndex();
+					int indexBaseNueva = indexFinalActual;
+					int indexFinalNueva = indexBaseActual;
+					
+					cBoxDivisaBase.setSelectedIndex(indexBaseNueva);
+					cBoxDivisaFinal.setSelectedIndex(indexFinalNueva);
+					
+					txtResult.setText("--");
+					
+				} catch (Exception ex) {
+					JOptionPane.showMessageDialog(btnIntercambiar, ex);
+				}
+			}
+		});
+		btnIntercambiar.setIcon(new ImageIcon(PanelDivisas.class.getResource("/Resources/icons/intercambio.png")));
+		btnIntercambiar.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnIntercambiar.setAlignmentX(0.5f);
+		btnIntercambiar.setBounds(471, 128, 25, 25);
+		add(btnIntercambiar);
 
 	}
 }
