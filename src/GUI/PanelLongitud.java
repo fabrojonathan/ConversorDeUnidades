@@ -3,6 +3,7 @@ package GUI;
 import javax.swing.JPanel;
 import java.awt.Color;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.border.MatteBorder;
 
 import Conversor.ConversorLongitud;
@@ -105,6 +106,7 @@ public class PanelLongitud extends JPanel {
 					txtResult.setText(ft.format(resultado).toString());
 					
 				} catch (Exception ex) {
+					JOptionPane.showMessageDialog(btnConvertir, ex);
 				}
 			}
 		});
