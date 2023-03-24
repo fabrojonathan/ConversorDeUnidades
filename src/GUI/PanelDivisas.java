@@ -59,12 +59,12 @@ public class PanelDivisas extends JPanel {
 		add(txtMonto);
 		
 		JComboBox cBoxDivisaBase = new JComboBox();
-		cBoxDivisaBase.setModel(new DefaultComboBoxModel(new String[] {"Pesos", "Dolar", "DolarAustraliano", "Euro", "Libra", "Real", "Yen", "PesoMexicano", "PesoUruguayo", "Yuan"}));
+		cBoxDivisaBase.setModel(new DefaultComboBoxModel(new String[] {"Pesos", "Dolar", "DolarAustraliano", "Euro", "Libra", "Real", "Yen", "PesoMexicano", "PesoUruguayo", "Yuan", "Won"}));
 		cBoxDivisaBase.setBounds(217, 106, 248, 22);
 		add(cBoxDivisaBase);
 		
 		JComboBox cBoxDivisaFinal = new JComboBox();
-		cBoxDivisaFinal.setModel(new DefaultComboBoxModel(new String[] {"Pesos", "Dolar", "DolarAustraliano", "Euro", "Libra", "Real", "Yen", "PesoMexicano", "PesoUruguayo", "Yuan"}));
+		cBoxDivisaFinal.setModel(new DefaultComboBoxModel(new String[] {"Pesos", "Dolar", "DolarAustraliano", "Euro", "Libra", "Real", "Yen", "PesoMexicano", "PesoUruguayo", "Yuan", "Won"}));
 		cBoxDivisaFinal.setSelectedIndex(1);
 		cBoxDivisaFinal.setBounds(217, 153, 248, 22);
 		add(cBoxDivisaFinal);

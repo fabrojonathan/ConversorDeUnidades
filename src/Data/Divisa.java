@@ -10,5 +10,6 @@ public enum Divisa {
 	Yen,
 	PesoMexicano,
 	PesoUruguayo,
-	Yuan
+	Yuan,
+	Won
 }
