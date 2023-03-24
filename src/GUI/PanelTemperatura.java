@@ -14,7 +14,7 @@ import javax.swing.border.BevelBorder;
 import javax.swing.DefaultComboBoxModel;
 
 public class PanelTemperatura extends JPanel {
-	private JTextField textField;
+	private JTextField txtTemperatura;
 
 	/**
 	 * Create the panel.
@@ -42,21 +42,22 @@ public class PanelTemperatura extends JPanel {
 		lblIngreseLaTemperatura.setBounds(70, 61, 156, 17);
 		add(lblIngreseLaTemperatura);
 		
-		textField = new JTextField();
-		textField.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		textField.setColumns(10);
-		textField.setBounds(217, 60, 248, 23);
-		add(textField);
+		txtTemperatura = new JTextField();
+		txtTemperatura.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		txtTemperatura.setColumns(10);
+		txtTemperatura.setBounds(217, 60, 248, 23);
+		add(txtTemperatura);
 		
-		JComboBox cBoxDivisaBase = new JComboBox();
-		cBoxDivisaBase.setModel(new DefaultComboBoxModel(new String[] {"Celsius", "Kelvin", "Farenheit", "Ramkine"}));
-		cBoxDivisaBase.setBounds(217, 106, 248, 22);
-		add(cBoxDivisaBase);
+		JComboBox cBoxUnidadBase = new JComboBox();
+		cBoxUnidadBase.setModel(new DefaultComboBoxModel(new String[] {"Celsius", "Kelvin", "Farenheit", "Ramkine"}));
+		cBoxUnidadBase.setBounds(217, 106, 248, 22);
+		add(cBoxUnidadBase);
 		
-		JComboBox cBoxDivisaFinal = new JComboBox();
-		cBoxDivisaFinal.setModel(new DefaultComboBoxModel(new String[] {"Celsius", "Kelvin", "Farenheit", "Ramkine"}));
-		cBoxDivisaFinal.setBounds(217, 153, 248, 22);
-		add(cBoxDivisaFinal);
+		JComboBox cBoxUnidadFinal = new JComboBox();
+		cBoxUnidadFinal.setModel(new DefaultComboBoxModel(new String[] {"Celsius", "Kelvin", "Farenheit", "Ramkine"}));
+		cBoxUnidadFinal.setSelectedIndex(1);
+		cBoxUnidadFinal.setBounds(217, 153, 248, 22);
+		add(cBoxUnidadFinal);
 		
 		JLabel lblNewLabel_2 = new JLabel("Unidad a convertir");
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 14));
