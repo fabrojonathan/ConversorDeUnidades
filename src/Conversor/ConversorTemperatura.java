@@ -4,13 +4,17 @@ import Data.Temperatura;
 
 public class ConversorTemperatura{
 
-	public double Convertir(Temperatura pUnidadInicial, Temperatura pUnidadFinal, double pDigito) {
+	public double Convertir(int pUnidadInicial, int pUnidadFinal, double pDigito) {
 		
-		double Resultado;		
+		Temperatura tempBase = Temperatura.values()[pUnidadInicial];
+		Temperatura tempFinal = Temperatura.values()[pUnidadFinal];
+		Double resultado = 0.0;
 		
-		Resultado = pUnidadInicial.convertir(pDigito, pUnidadFinal);
+		if(!(tempBase == tempFinal)) {
+			resultado = tempBase.convertir(pDigito, tempFinal);
+		}
 		
-		return Resultado;
+		return resultado;
 	}
 
 }
