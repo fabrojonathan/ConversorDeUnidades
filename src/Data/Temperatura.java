@@ -11,7 +11,7 @@ public enum Temperatura{
 			case Fahrenheit:
 				return ((pTemperatura * 1.8) + 32);
 				
-			case Ramkine:
+			case Rankine:
 				return (pTemperatura * 1.8) + 491.67;
 				
 			default:
@@ -29,7 +29,7 @@ public enum Temperatura{
 			case Fahrenheit:
 				return (1.8 * (pTemperatura - 273.15) + 32);
 				
-			case Ramkine:
+			case Rankine:
 				return pTemperatura * 1.8;
 			
 			default:
@@ -47,7 +47,7 @@ public enum Temperatura{
 			case Kelvin:
 				return ((pTemperatura - 32)/1.8) + 273.15;
 				
-			case Ramkine:
+			case Rankine:
 				return pTemperatura * 1.8;
 				
 			default:
@@ -56,7 +56,7 @@ public enum Temperatura{
 			}
 		}
 	},
-	Ramkine{
+	Rankine{
 		public double convertir(double pTemperatura, Temperatura pFinal) {
 			switch(pFinal) {
 			

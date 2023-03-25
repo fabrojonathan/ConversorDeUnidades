@@ -60,13 +60,13 @@ public class PanelTemperatura extends JPanel {
 		
 		JComboBox cBoxUnidadBase = new JComboBox();
 		cBoxUnidadBase.setFont(new Font("Leelawadee", Font.PLAIN, 14));
-		cBoxUnidadBase.setModel(new DefaultComboBoxModel(new String[] {"Celsius", "Kelvin", "Farenheit", "Ramkine"}));
+		cBoxUnidadBase.setModel(new DefaultComboBoxModel(new String[] {"Celsius", "Kelvin", "Farenheit", "Rankine"}));
 		cBoxUnidadBase.setBounds(217, 106, 248, 22);
 		add(cBoxUnidadBase);
 		
 		JComboBox cBoxUnidadFinal = new JComboBox();
 		cBoxUnidadFinal.setFont(new Font("Leelawadee", Font.PLAIN, 14));
-		cBoxUnidadFinal.setModel(new DefaultComboBoxModel(new String[] {"Celsius", "Kelvin", "Farenheit", "Ramkine"}));
+		cBoxUnidadFinal.setModel(new DefaultComboBoxModel(new String[] {"Celsius", "Kelvin", "Farenheit", "Rankine"}));
 		cBoxUnidadFinal.setSelectedIndex(1);
 		cBoxUnidadFinal.setBounds(217, 153, 248, 22);
 		add(cBoxUnidadFinal);
