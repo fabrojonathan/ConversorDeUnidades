@@ -13,6 +13,7 @@ import javax.swing.border.BevelBorder;
 import javax.swing.border.SoftBevelBorder;
 
 import Conversor.ConversorDivisas;
+import Data.Divisa;
 
 import javax.swing.border.CompoundBorder;
 import javax.swing.SwingConstants;
@@ -88,11 +89,12 @@ public class PanelDivisas extends JPanel {
 				try {
 					
 					Double monto = Double.parseDouble(txtMonto.getText());
-					int indexBase = cBoxDivisaBase.getSelectedIndex();
-					int indexFinal = cBoxDivisaFinal.getSelectedIndex();
+					
+					Divisa UnidadBase = Divisa.values()[cBoxDivisaBase.getSelectedIndex()];
+					Divisa UnidadFinal = Divisa.values()[cBoxDivisaFinal.getSelectedIndex()];
 					
 					ConversorDivisas nConversor = new ConversorDivisas();
-					Double resultadoConversion = nConversor.Convertir(indexBase, indexFinal, monto);
+					Double resultadoConversion = nConversor.Convertir(UnidadBase, UnidadFinal, monto);
 					
 					DecimalFormat ft = new DecimalFormat("#.##");
 					txtResult.setText(ft.format(resultadoConversion).toString());

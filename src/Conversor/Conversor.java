@@ -1,7 +1,9 @@
 package Conversor;
 
+import Data.Unit;
+
 public interface Conversor {
 	
-	abstract double Convertir(int pUnidadInicial,int pUnidadFinal,double pDigito);
+	abstract double Convertir(Unit pUnidadInicial,Unit pUnidadFinal,double pDigito);
 	
 }

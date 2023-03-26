@@ -12,6 +12,7 @@ import javax.swing.JButton;
 import javax.swing.border.MatteBorder;
 
 import Conversor.ConversorMasa;
+import Data.Masa;
 
 import java.awt.Color;
 import javax.swing.DefaultComboBoxModel;
@@ -97,15 +98,15 @@ public class PanelMasa extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					
-					Double cantidad = Double.parseDouble(txtCantidad.getText());
-					int indexBase = cBoxUnidadBase.getSelectedIndex();
-					int indexFinal = cBoxUnidadFinal.getSelectedIndex();
+					Double Cantidad = Double.parseDouble(txtCantidad.getText());
+					Masa UnidadBase = Masa.values()[cBoxUnidadBase.getSelectedIndex()];
+					Masa UnidadFinal = Masa.values()[cBoxUnidadFinal.getSelectedIndex()];
 					
 					ConversorMasa nConversorMasa = new ConversorMasa();
-					Double resultado = nConversorMasa.Convertir(indexBase, indexFinal, cantidad);
+					Double Resultado = nConversorMasa.Convertir(UnidadBase, UnidadFinal, Cantidad);
 					
 					DecimalFormat ft = new DecimalFormat("#.##");
-					txtResult.setText(ft.format(resultado).toString());
+					txtResult.setText(ft.format(Resultado).toString());
 					
 				} catch (Exception ex) {
 					JOptionPane.showMessageDialog(btnConvertir, ex);

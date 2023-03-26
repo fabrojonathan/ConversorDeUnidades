@@ -6,10 +6,10 @@ import java.util.Properties;
 
 public class ConversorDivisas implements Conversor{
 	
-	private double HallarValorConversion(int pUnidadInicial, int pUnidadFinal) {
+	private double HallarValorConversion(Unit pUnidadInicial, Unit pUnidadFinal) {
 		
-		String UnidadInicial = Divisa.values()[pUnidadInicial].name();
-		String UnidadFinal = Divisa.values()[pUnidadFinal].name();
+		String UnidadInicial = ((Divisa)pUnidadInicial).name();
+		String UnidadFinal = ((Divisa)pUnidadFinal).name();
 		String ValorConversion = new StringBuilder(UnidadInicial).append("_").append(UnidadFinal).toString();
 		
 		Properties properties = new Properties();
@@ -21,7 +21,7 @@ public class ConversorDivisas implements Conversor{
 	}
 
 	@Override
-	public double Convertir(int pUnidadInicial, int pUnidadFinal, double pDigito) {
+	public double Convertir(Unit pUnidadInicial, Unit pUnidadFinal, double pDigito) {
 		
 		double ValorConversion = HallarValorConversion(pUnidadInicial, pUnidadFinal);
 		return pDigito * ValorConversion;

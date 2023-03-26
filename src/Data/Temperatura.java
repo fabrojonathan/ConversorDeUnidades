@@ -1,6 +1,6 @@
 package Data;
 
-public enum Temperatura{
+public enum Temperatura implements Unit{
 	Celsius{
 		public double convertir(double pTemperatura, Temperatura pFinal) {
 			switch(pFinal) {

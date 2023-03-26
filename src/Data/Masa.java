@@ -1,6 +1,6 @@
 package Data;
 
-public enum Masa {
+public enum Masa implements Unit{
 	Miligramo,
 	Centigramo,
 	Decigramo,

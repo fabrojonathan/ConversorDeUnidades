@@ -1,20 +1,21 @@
 package Conversor;
 
 import Data.Temperatura;
+import Data.Unit;
 
 public class ConversorTemperatura{
 
-	public double Convertir(int pUnidadInicial, int pUnidadFinal, double pDigito) {
+	public double Convertir(Unit pUnidadInicial, Unit pUnidadFinal, double pDigito) {
 		
-		Temperatura tempBase = Temperatura.values()[pUnidadInicial];
-		Temperatura tempFinal = Temperatura.values()[pUnidadFinal];
-		Double resultado = 0.0;
+		Temperatura TempBase = ((Temperatura)pUnidadInicial);
+		Temperatura TempFinal = ((Temperatura)pUnidadFinal);
+		Double Resultado = 0.0;
 		
-		if(!(tempBase == tempFinal)) {
-			resultado = tempBase.convertir(pDigito, tempFinal);
+		if(!(TempBase == TempFinal)) {
+			Resultado = TempBase.convertir(pDigito, TempFinal);
 		}
 		
-		return resultado;
+		return Resultado;
 	}
 
 }

@@ -1,22 +1,23 @@
 package Conversor;
 
 import Data.Longitud;
+import Data.Unit;
 
 public class ConversorLongitud implements Conversor{
 
 	@Override
-	public double Convertir(int pUnidadInicial, int pUnidadFinal, double pDigito) {
-		Longitud vUnidadInicial = Longitud.values()[pUnidadInicial];
-		Longitud vUnidadFinal = Longitud.values()[pUnidadFinal];
-		double difUnidades;
-		double resultConversion = 0;
+	public double Convertir(Unit pUnidadInicial, Unit pUnidadFinal, double pDigito) {
+		
+		Longitud vUnidadInicial = ((Longitud)pUnidadInicial);
+		Longitud vUnidadFinal = ((Longitud)pUnidadFinal);
+		double DifUnidades;
+		double ResultConversion = 0;
 		
 		if (!(vUnidadInicial == vUnidadFinal)) {
-			difUnidades = vUnidadInicial.compareTo(vUnidadFinal);
-			resultConversion = pDigito * Math.pow(10, (difUnidades));
+			DifUnidades = vUnidadInicial.compareTo(vUnidadFinal);
+			ResultConversion = pDigito * Math.pow(10, (DifUnidades));
 		}
-		//System.out.println((int)resultConversion+ " " + Longitud.values()[pUnidadFinal].name() + "s");
-		return resultConversion;
+		return ResultConversion;
 	}
 	
 }

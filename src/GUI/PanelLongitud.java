@@ -7,6 +7,7 @@ import javax.swing.JOptionPane;
 import javax.swing.border.MatteBorder;
 
 import Conversor.ConversorLongitud;
+import Data.Longitud;
 
 import java.awt.Font;
 import javax.swing.SwingConstants;
@@ -98,12 +99,12 @@ public class PanelLongitud extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					
-					Double medida = Double.parseDouble(txtMedida.getText());
-					int indexBase = cBoxUnidadBase.getSelectedIndex();
-					int indexFinal = cBoxUnidadFinal.getSelectedIndex();
+					Double Medida = Double.parseDouble(txtMedida.getText());
+					Longitud UnidadBase = Longitud.values()[cBoxUnidadBase.getSelectedIndex()];
+					Longitud UnidadFinal = Longitud.values()[cBoxUnidadFinal.getSelectedIndex()];
 					
 					ConversorLongitud nConversorLongitud = new ConversorLongitud();
-					Double resultado = nConversorLongitud.Convertir(indexBase, indexFinal, medida);
+					Double resultado = nConversorLongitud.Convertir(UnidadBase, UnidadFinal, Medida);
 					
 					DecimalFormat ft = new DecimalFormat("#.##");
 					txtResult.setText(ft.format(resultado).toString());

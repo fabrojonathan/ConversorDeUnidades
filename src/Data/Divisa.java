@@ -1,6 +1,6 @@
 package Data;
 
-public enum Divisa {
+public enum Divisa implements Unit{
 	Pesos,
 	Dolar,
 	DolarAustraliano,

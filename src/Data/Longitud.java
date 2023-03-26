@@ -1,6 +1,6 @@
 package Data;
 
-public enum Longitud {
+public enum Longitud implements Unit{
 	Milimetro,
 	Centimetro,
 	Decimetro,
