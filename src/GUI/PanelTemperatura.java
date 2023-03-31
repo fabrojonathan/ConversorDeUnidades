@@ -46,10 +46,12 @@ public class PanelTemperatura extends JPanel {
 		txtResult.setBounds(0, 0, 256, 40);
 		panelResult.add(txtResult);
 		
-		JLabel lblIngreseLaTemperatura = new JLabel("Ingrese la temperatura");
+		JLabel lblIngreseLaTemperatura = new JLabel("<html>Ingrese la <br>temperatura</html>");
+		lblIngreseLaTemperatura.setVerticalTextPosition(SwingConstants.TOP);
+		lblIngreseLaTemperatura.setVerticalAlignment(SwingConstants.TOP);
 		lblIngreseLaTemperatura.setHorizontalAlignment(SwingConstants.LEFT);
 		lblIngreseLaTemperatura.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblIngreseLaTemperatura.setBounds(70, 61, 156, 17);
+		lblIngreseLaTemperatura.setBounds(70, 61, 147, 49);
 		add(lblIngreseLaTemperatura);
 		
 		txtTemperatura = new JTextField();
@@ -86,13 +88,13 @@ public class PanelTemperatura extends JPanel {
 		panel.setLayout(null);
 		panel.setBorder(new CompoundBorder(null, new BevelBorder(BevelBorder.LOWERED, null, null, null, null)));
 		panel.setBackground(new Color(241, 250, 255));
-		panel.setBounds(10, 11, 216, 23);
+		panel.setBounds(10, 11, 240, 23);
 		add(panel);
 		
 		JLabel lblNewLabel_3 = new JLabel("Conversor de Temperaturas");
 		lblNewLabel_3.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel_3.setFont(new Font("Leelawadee", Font.BOLD | Font.ITALIC, 14));
-		lblNewLabel_3.setBounds(10, 0, 206, 23);
+		lblNewLabel_3.setBounds(10, 0, 230, 23);
 		panel.add(lblNewLabel_3);
 		
 		JButton btnConvertir = new JButton("Convertir");

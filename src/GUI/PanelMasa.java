@@ -70,13 +70,13 @@ public class PanelMasa extends JPanel {
 		panel.setLayout(null);
 		panel.setBorder(new CompoundBorder(null, new BevelBorder(BevelBorder.LOWERED, null, null, null, null)));
 		panel.setBackground(new Color(241, 250, 255));
-		panel.setBounds(10, 11, 216, 23);
+		panel.setBounds(10, 11, 240, 23);
 		add(panel);
 		
 		JLabel lblNewLabel_3_1 = new JLabel("Conversor de Masas");
 		lblNewLabel_3_1.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel_3_1.setFont(new Font("Leelawadee", Font.BOLD | Font.ITALIC, 14));
-		lblNewLabel_3_1.setBounds(10, 0, 206, 23);
+		lblNewLabel_3_1.setBounds(10, 0, 230, 23);
 		panel.add(lblNewLabel_3_1);
 		
 		JPanel panelResult = new JPanel();

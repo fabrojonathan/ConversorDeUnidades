@@ -112,14 +112,14 @@ public class PanelDivisas extends JPanel {
 		JPanel panel = new JPanel();
 		panel.setBorder(new CompoundBorder(null, new BevelBorder(BevelBorder.LOWERED, null, null, null, null)));
 		panel.setBackground(new Color(241, 250, 255));
-		panel.setBounds(10, 11, 216, 23);
+		panel.setBounds(10, 11, 240, 23);
 		add(panel);
 		panel.setLayout(null);
 		
 		JLabel lblNewLabel_3 = new JLabel("Conversor de Divisas");
 		lblNewLabel_3.setFont(new Font("Leelawadee", Font.BOLD | Font.ITALIC, 14));
 		lblNewLabel_3.setHorizontalAlignment(SwingConstants.LEFT);
-		lblNewLabel_3.setBounds(10, 0, 206, 23);
+		lblNewLabel_3.setBounds(10, 0, 230, 23);
 		panel.add(lblNewLabel_3);
 		
 		JButton btnIntercambiar = new JButton("");
