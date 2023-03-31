@@ -6,6 +6,7 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JPasswordField;
 import javax.swing.JTextPane;
+import java.awt.ComponentOrientation;
 
 public class PanelHome extends JPanel {
 
@@ -23,9 +24,16 @@ public class PanelHome extends JPanel {
 		
 		JTextPane txtpnEstaAplicacinDe = new JTextPane();
 		txtpnEstaAplicacinDe.setFont(new Font("Leelawadee", Font.ITALIC, 14));
-		txtpnEstaAplicacinDe.setText("Esta aplicación le facilitara la vida.\r\nCon pocos clicks podra realizar cualquier tipo de conversión.\r\nIngrese la medida o monto, seleccione la unidad base y la unidad final, y la aplicación\r\nle mostrara el resultado!\r\n\r\n\r\n\t\t\t\t\t   \t\t   Desarrollada por: Fabro Jonathan\r\n\t\t  De la mano de: OneOracle - Alura");
-		txtpnEstaAplicacinDe.setBounds(143, 125, 384, 184);
+		txtpnEstaAplicacinDe.setText("Esta aplicación le facilitara la vida.\r\nCon pocos clicks podra realizar cualquier tipo de conversión.\r\nIngrese la medida o monto, seleccione la unidad base y la unidad final, y la aplicación\r\nle mostrara el resultado!\r\n");
+		txtpnEstaAplicacinDe.setBounds(143, 125, 384, 114);
 		add(txtpnEstaAplicacinDe);
+		
+		JTextPane txtpnDesarrolladaPorFabro = new JTextPane();
+		txtpnDesarrolladaPorFabro.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
+		txtpnDesarrolladaPorFabro.setText("Desarrollada por: Fabro Jonathan\r\nDe la mano de: OneOracle - Alura");
+		txtpnDesarrolladaPorFabro.setFont(new Font("Leelawadee", Font.ITALIC, 14));
+		txtpnDesarrolladaPorFabro.setBounds(143, 264, 384, 45);
+		add(txtpnDesarrolladaPorFabro);
 
 	}
 	private static class __Tmp {
