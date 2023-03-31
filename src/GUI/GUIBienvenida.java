@@ -65,7 +65,7 @@ public class GUIBienvenida extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setBackground(UIManager.getColor("FormattedTextField.selectionBackground"));
-		lblNewLabel.setIcon(new ImageIcon("src\\Resources\\wallpaperbetter.com_1024x600.jpg"));
+		lblNewLabel.setIcon(new ImageIcon(GUIBienvenida.class.getResource("/Resources/wallpaperbetter.com_1024x600.jpg")));
 		lblNewLabel.setBounds(0, 0, 800, 400);
 		contentPane.add(lblNewLabel);
 		
