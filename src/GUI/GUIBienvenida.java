@@ -53,7 +53,7 @@ public class GUIBienvenida extends JFrame {
 		JLabel lblNewLabel_1_1 = new JLabel("Conversor de Unidades");
 		lblNewLabel_1_1.setForeground(Color.BLACK);
 		lblNewLabel_1_1.setFont(new Font("Lucida Bright", Font.BOLD | Font.ITALIC, 17));
-		lblNewLabel_1_1.setBounds(10, 11, 205, 25);
+		lblNewLabel_1_1.setBounds(10, 11, 358, 25);
 		contentPane.add(lblNewLabel_1_1);
 		
 		JProgressBar progressBar = new JProgressBar();
